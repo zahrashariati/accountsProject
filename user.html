@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <!--notificaiton box-->
+        <div class="notif" onclick="toggleNotif()">
+            <img src="bell_24px.png" alt="#"><span class="number">9+</span>
+        </div>
+        <ul class="notif-box" id="box">
+            <h2>اعلانات <span class="number">3  </span></h2>
+            <li class="notif-item">
+                <img src="user_30px.png" alt="">
+                <div class="text">
+                    <h4>زهرا شریعتی</h4>
+                    <p>سلام چطوری؟</p>
+                </div>
+            </li>
+            <li class="notif-item">
+                <img src="user_30px.png" alt="">
+                <div class="text">
+                    <h4>زهرا شریعتی</h4>
+                    <p>سلام چطوری؟</p>
+                </div>
+            </li>
+            <li class="notif-item">
+                <img src="user_30px.png" alt="">
+                <div class="text">
+                    <h4>زهرا شریعتی</h4>
+                    <p>سلام چطوری؟</p>
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+    <section class="grids"> 
+        <div class="grid first" onclick="window.open('./meetings.html')">
+            <h1>قرارهای ملاقات</h1>
+        </div>
+        <div class="grid second" onclick="window.open('./onlineCalls.html')">
+            <h1>تماس ها</h1>
+        </div>
+        <div class="grid third" onclick="window.open('./documents.html')">
+            <h1>مدارک</h1>
+        </div>
+    </section>
+
+    <script>
+
+        let box = document.getElementById('box');
+        let down = false;
+
+        function toggleNotif(){
+            if(down){
+                box.style.height = '0px';
+                box.style.opacity = 0;
+                down = false;
+            }else{
+                box.style.height = '300px';
+                box.style.opacity = 1;
+                down = true;
+            }
+        }
+    </script>
+</body>
+</html>

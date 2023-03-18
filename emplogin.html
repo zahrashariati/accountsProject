@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>empLogin</title>
+    <link rel="stylesheet" href="emplogin.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div class="form-box">
+        <h1>ساخت کاربر</h1>
+        <p id="warning" style="color :red">بخش رمز خالی لست یا به درستی نکرار نشده است</p>
+        <div class="input-box">
+            <i class="fa fa-user-o"></i>
+            <input type="text" placeholder="نام کاربری">
+        </div>
+        <div class="input-box">
+            <i class="fa fa-bank"></i>
+            <input type="text" placeholder="دپارتمان">
+        </div>
+        <div class="input-box">
+            <i class="fa fa-id-badge"></i>
+            <input type="text" placeholder="شناسه کاربری">
+        </div>
+        <div class="input-box">
+            <i class="fa fa-key"></i>
+            <input type="password" placeholder="رمز عبور" id="passinput">
+            <span class="eye" onclick="myfuncPass()">
+                <i id="hide1" class="fa fa-eye"></i>
+                <i id="hide2" class="fa fa-eye-slash"></i>
+            </span>
+        </div>
+        <div class="input-box">
+            <i class="fa fa-check-square-o"></i>
+            <input type="password" placeholder="تکرار رمز عبور" id="coninput">
+            <span class="eye" onclick="myfuncConfirm()">
+                <i id="hide1" class="fa fa-eye"></i>
+                <i id="hide2" class="fa fa-eye-slash"></i>
+            </span>
+        </div>
+        <button type="button" class="login-btn" onclick="confirmation()">افزودن</button>
+    </div>
+
+    <script>
+        function myfuncPass(){
+            let x = document.getElementById("passinput");
+            let y = document.getElementById("hide1");
+            let z = document.getElementById("hide2");
+
+            if(x.type === 'password'){
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            }
+            else{
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+        }
+
+        function myfuncConfirm(){
+            let x = document.getElementById("coninput");
+            let y = document.getElementById("hide1");
+            let z = document.getElementById("hide2");
+
+            if(x.type == 'password'){
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            }
+            else{
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+        }
+
+        function confirmation(){
+            let password = document.getElementById("passinput").value;
+            let confirmedPassword = document.getElementById("coninput").value;
+            if(password == "" || password != confirmedPassword){
+                document.getElementById("warning").style.display = "block";
+            }
+            else{
+                document.getElementById("warning").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

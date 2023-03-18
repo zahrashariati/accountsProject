@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>documents</title>
+    <link rel="stylesheet" href="documents.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <div class="bar" onclick="toggleBar()">
+            <!-- <i class="fa fa-bars"></i> -->
+            <img src="menu_32px.png" alt="#">
+        </div>
+        <ul class="bars-box" id="bar">
+            <li class="bars-item">
+                <div class="first" onclick="window.open('./meetings.html')">قرار های ملاقات</div>
+            </li>
+            <li class="bars-item">
+                <div class="second" onclick="window.open('./onlineCalls.html')">تماس ها</div>
+            </li>
+            <li class="bars-item">
+                <div class="third" onclick="window.open('./documents.html')">مدارک</div>
+            </li>
+
+        </ul>
+        <!--notificaiton box-->
+        <div class="notif" onclick="toggleNotif()">
+            <img src="bell_24px.png" alt="#"><span class="number">9+</span>
+        </div>
+        <ul class="notif-box" id="box">
+            <h2>اعلانات <span class="number">3  </span></h2>
+            <li class="notif-item">
+                <img src="user_30px.png" alt="">
+                <div class="text">
+                    <h4>زهرا شریعتی</h4>
+                    <p>سلام چطوری؟</p>
+                </div>
+            </li>
+            <li class="notif-item">
+                <img src="user_30px.png" alt="">
+                <div class="text">
+                    <h4>زهرا شریعتی</h4>
+                    <p>سلام چطوری؟</p>
+                </div>
+            </li>
+            <li class="notif-item">
+                <img src="user_30px.png" alt="">
+                <div class="text">
+                    <h4>زهرا شریعتی</h4>
+                    <p>سلام چطوری؟</p>
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+    <div class="container">
+        <ul class="name-list">
+            <li class="grid">
+                <i class="fa fa-angle-left" onclick="window.open('./documentList.html')"></i>
+                <p class="user-name">نام شخص</p>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+
+        let box = document.getElementById('box');
+        let down = false;
+
+        function toggleNotif(){
+            if(down){
+                box.style.height = '0px';
+                box.style.opacity = 0;
+                down = false;
+            }else{
+                box.style.height = '300px';
+                box.style.opacity = 1;
+                down = true;
+            }
+        }
+
+        let bar = document.getElementById('bar');
+        let downBar = false;
+
+        function toggleBar(){
+            if(downBar){
+                bar.style.height = '0px';
+                bar.style.opacity = 0;
+                downBar = false;
+            }else{
+                bar.style.height = '220px';
+                bar.style.opacity = 1;
+                downBar = true;
+            }
+        }
+    </script>
+</body>
+</html>

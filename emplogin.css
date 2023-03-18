@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: farsi;
+    src: url(./IRANSansWeb.ttf);
+}
+
+body{
+    background-color: #fff;
+    font-family: farsi;
+}
+
+.form-box{
+    direction: rtl;
+    width: 500px;
+    background: #1976d2;
+    margin: 1% auto;
+    padding: 50px;
+    color: #fff;
+    box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+
+}
+
+#warning{
+    position: relative;
+    right: 50px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.input-box{
+    margin: 31px auto;
+    width: 80%;
+    border-bottom: 1px solid #fff;
+    padding-top: 10px;
+    padding-bottom: 5px;
+
+}
+
+.input-box input{
+    width: 90%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+
+::placeholder{
+    color: #ccc;
+
+}
+
+p{
+    margin-left: 5px;
+    font-size: 11px;
+    display: none;
+}
+
+.fa{
+    margin-left: 10px;
+}
+
+.eye{
+    position: absolute;
+}
+
+#hide1{
+    display: none;
+}
+
+.login-btn{
+    margin: 31px auto;
+    width: 80%;
+    align-items: center;
+    display: block;
+    outline: none;
+    padding: 10px 0;
+    border: 1px solid #fff;
+    cursor: pointer;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+
+
+}
