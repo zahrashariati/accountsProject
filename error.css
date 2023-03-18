@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: farsi;
+    src: url(./IRANSansWeb.ttf);
+}
+
+body{
+    background-color: #fff;
+    font-family: farsi;
+    min-height: 100vh;
+    background-image: linear-gradient(125deg , #1976d2 , #ccc);
+}
+
+.container{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: black;
+
+}
+
+.container h1{
+    font-size: 160px;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 20px;
+}
