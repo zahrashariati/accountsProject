@@ -1,0 +1,198 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: farsi;
+    src: url(./IRANSansWeb.ttf);
+}
+
+body{
+    font-family: farsi;
+}
+
+.container{
+    direction: rtl;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1976d2;
+    height: 60px;
+    position: relative;
+}
+
+.bar{
+    
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+.notif{
+    cursor: pointer;
+    margin-right: 50px;
+    line-height: 60px;
+}
+
+.notif span{
+    background: #f00;
+    padding: 2px;
+    border-radius: 50%;
+    color: white;
+    vertical-align: top;
+    margin-left: -25px;
+    font-size: 11px;
+
+}
+
+.notif img{
+    display: inline-block;
+    width: 40px;
+    margin-top: 20px;
+}
+
+.notif:hover{
+    opacity: .7;
+
+}
+
+.bars-box{
+    direction: rtl;
+    width: 300px;
+    height: 0px;
+    opacity: 0;
+    list-style-type: none;
+    position: absolute;
+    top: 63px;
+    left: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+.bars-item{
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding: 15px 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.bars-item:hover{
+    background-color: #1976d2;
+    color: white;
+}
+
+.logo{
+    flex: 1;
+    margin-right: 50px;
+    color: #eee;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.notif-box{
+    direction: rtl;
+    width: 300px;
+    height: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    opacity: 0;
+    position: absolute;
+    top: 63px;
+    right: 35px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.notif-box h2{
+    font-size: 14px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    color: #999;
+
+}
+
+.notif-box h2 span{
+    color: #f00;
+
+}
+
+.notif-item{
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding: 15px 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.notif-item:hover{
+    background-color: #eee;
+}
+
+.notif-item img{
+    display: block;
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.notif-item .text h4{
+    color: #777;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.notif-item .text p{
+    color: #aaa;
+    font-size: 12px;
+}
+
+
+.container{
+    margin-top: 10%;
+}
+
+.choose{
+    list-style-type: none;
+}
+
+.choose li{
+    display: flex;
+    margin: 2% auto;
+    position: relative;
+
+    width: 400px;
+    height: 50px;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 3px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.time{
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+}
+
+.selected{
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    font-family: farsi;
+}
+
+.selected option{
+    font-family: farsi;
+    color: #1976d2;
+}
